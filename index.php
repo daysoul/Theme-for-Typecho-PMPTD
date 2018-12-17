@@ -5,7 +5,7 @@
  * @package UX-PTD Theme 
  * @author TONY
  * @version v1.0
- * 
+ *  杀的杀的
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
