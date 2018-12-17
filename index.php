@@ -5,7 +5,7 @@
  * @package UX-PTD Theme 
  * @author TONY
  * @version v1.0
- *  11231321321312
+ *  1123132132131212312321312321312
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
