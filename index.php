@@ -1,55 +1,49 @@
 <?php
 /**
- * 原创设计来自开源主题Affinity 地址：https://github.com/Showfom/Affinity
  * 
- * @package UX-PTD Theme 
- * @author TONY
- * @version v1.0
- *  1
+ * @package Bigfa
+ * @author tony
+ * @version 1.0
  */
-
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
- $this->need('header.php');
- ?>
+$this->need('header.php');
+?>
 
-<div class="content-cards">
-<?php while($this->next()): ?>
-  <article class="content-card post">
-    <div class="card">
-      <a href="<?php $this->permalink() ?>" class="card-image " style="background-image: url(<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php $this->fields->img(); ?><?php else: ?><?php
-preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);
-$imgCount = count($matches[0]);
-if($imgCount >= 1){
-$img = $matches[2][0];
-echo <<<Html
-{$img}
-Html;
-}
-?><?php endif; ?>)">
-      </a>
-      <header class="card-header">
-        <div class="card-title">
-          <h1 class="post-title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
-        </div>
-      </header>
-      <section class="card-body">
-        <div class="card-body-text">
-          <?php $this->excerpt(120, ' ...'); ?>
-        </div>
-      </section>
-      <footer class="card-footer">
-        <time class="post-date" datetime="<?php $this->date('Y-m-d'); ?>"><?php $this->date(); ?></time>
-         · <?php $this->category(', '); ?>
-      </footer>
+<div class="layoutMultiColumn-container"> 
+  
+    <div class="layoutMultiColumn layoutMultiColumn--primary"> 
+     <div class="blockGroup homeGroup u-paddingTop50"> 
+        <div class="heading-title">
+         最新文章
+        </div> 
+
+        <div class="col-mb-12 col-8" id="main" role="main">
+          <?php while ($this->next()): ?>
+             <article class="block--list block--withoutImage u-clearfix" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <h2 class="block-title" itemprop="headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+
+                    <div class="block-snippet" itemprop="about">
+                  <?php $this->excerpt(80,'...'); ?>
+                    </div>
+              
+              <div class="block-postMeta">
+                <a href="<?php $this->permalink() ?>"  rel="category tag"><?php $this->category(','); ?></a>
+                <span class="middotDivider"></span>
+               <a data-no-instant><time class="lately-a" datetime="<?php $this->date('Y-m-d H:i:s'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s');?></time></a>
+              </div>
+            </article>
+          <?php endwhile; ?>
+        </div> 
+     </div> 
+
+     <div class="lists-navigator clearfix">
+		<?php $this->pageNav('←','→','2','...'); ?>
+	 </div>
+
     </div>
-  </article>
-<?php endwhile; ?>
-</div>
 
-<nav class="pagination" role="navigation">
-<?php $this->pageLink('<x aria-label="Previous" class="btn btn-primary">上一页</x>'); ?>
-<?php $this->pageLink('<x aria-label="Next" class="btn btn-primary">下一页</x>','next'); ?>
-</nav>
+<?php $this->need('sidebar.php'); ?>
 
+</div> <!-- 对应layoutMultiColumn-container -->
 
 <?php $this->need('footer.php'); ?>

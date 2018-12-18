@@ -1,28 +1,26 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 
-<article class="content-post post tag-jian-ti-zhong-wen" role="main">
+<div class="layoutSingleColumn">
+    <article class="u-paddingTop50" itemscope="itemscope" itemtype="http://schema.org/Article">
+      <header class="entry-header">
+        <h2 class="entry-title" itemprop="headline"><?php $this->title() ?></h2>
+        <div class="entry-meta">
+            <a><time class="lately-a" datetime="<?php $this->date('Y-m-d H:i:s'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s');?></time></a>
+            <span class="middotDivider"></span>
+            <a href="<?php $this->permalink(); ?>"><?php $this->category(','); ?></a>
+        </div>
+      </header>
 
-  <div class="content-post-title">
-    <h1><?php $this->title() ?></h1>
-  </div>
-  <div class="content-post-meta">
-    <time class="post-date" datetime="<?php $this->date('Y-m-d'); ?>"><?php $this->date('Y年m月d日'); ?></time> · <?php $this->category(', '); ?></div>
-  <div class="content-post-body">
-  <?php $this->content(); ?>
-  </div>
-  <div class="content-post-meta post-meta-tags">
-    <?php $this->tags(' , ', true, 'none'); ?>
-  </div>
+      <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php $this->permalink(); ?>"/>
 
-  <div class="content-post-comments">
-  </div>
+        <div class="grap" itemprop="articleBody">
+            <?php parseContent($this); ?>
+        </div>
+    </article>
 
-  <div class="doc_comments">
-  <?php $this->need('comments.php'); ?>
-  </div>
+    <?php $this->need('comments.php'); ?>
 
-</article>
-
+</div><!-- end #main-->
 
 <?php $this->need('footer.php'); ?>
