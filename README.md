@@ -1,3 +1,3 @@
-# UXPTD-Theme
-此为UXPTD主题
+# PMPTD-Theme
+此为PMPTD主题
 
