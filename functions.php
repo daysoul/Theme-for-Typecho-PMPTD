@@ -55,7 +55,7 @@ function themeConfig($form) {
         array('able' => _t('启用'),
             'disable' => _t('禁止'),
         ),
-        'able', _t('Instantclick设置'), _t('默认启用'));
+        'disable', _t('Instantclick设置'), _t('AJAX页面加载BAR，默认关闭'));
     $form->addInput($instantclick);
 	
 	//开启APlayer
@@ -77,7 +77,7 @@ function themeConfig($form) {
 
 function themeInit($archive) {
     if ($archive->is('index')) {
-        $archive->parameter->pageSize = 8; // 自定义条数
+        $archive->parameter->pageSize = 8; // 自定义页面文章数
     }
     if ($archive->is('categoty')) {
         $archive->parameter->pageSize = 1000; // 自定义条数
@@ -139,7 +139,7 @@ function thumb($cid) {
 		if(!empty($options->thumUrl) && $options->thumUrl)
 			$imgurl = $options->thumUrl;
 		else
-			$imgurl = 'https://img.dearjohn.cn/usr/themes/Bigfa/img/default.jpg';
+            $imgurl = 'http://47.92.138.2/usr/themes/Theme-for-Typecho-UXPTD/img/default.jpg';
 	}
 	 $db = Typecho_Db::get();
 	 $rs = $db->fetchRow($db->select('table.contents.text')

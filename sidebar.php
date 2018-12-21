@@ -5,7 +5,7 @@
 	 
       <div class="widget"> 
        <div class="heading-title">
-        关于博主
+        BIO
        </div> 
        <div class="widget-card"> 
         <div class="widget-card-imageWrapper"> 
@@ -35,7 +35,7 @@
          </div>
          <div class="list-itemInfo">
           <h4 class="list-itemTitle"><a href="<?php $recent->permalink();?>"><?php $recent->title();?></a></h4>
-          <p class="list-itemDescription"><a href="<?php $recent->permalink();?>" rel="category tag"><?php $recent->category();?></a><span class="middotDivider"></span><?php $recent->author();?></p>
+          <p class="list-itemDescription"><a href="<?php $recent->permalink();?>" rel="category tag"><?php $recent->date('m-d');?></a><span class="middotDivider"></span>responses  <?php $recent->commentsNum();?></p>
          </div>
 		 </li>
 		<?php endwhile; ?>

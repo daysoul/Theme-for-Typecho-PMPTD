@@ -6,9 +6,11 @@
       <header class="entry-header">
         <h2 class="entry-title" itemprop="headline"><?php $this->title() ?></h2>
         <div class="entry-meta">
-            <a><time class="lately-a" datetime="<?php $this->date('Y-m-d H:i:s'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s');?></time></a>
+            <a><time class="lately-a" datetime="<?php $this->date('Y-m-d'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d');?></time></a>
             <span class="middotDivider"></span>
             <a href="<?php $this->permalink(); ?>"><?php $this->category(','); ?></a>
+            <span class="middotDivider"></span>
+            <a><time class="lately-a" itemprop="datePublished"><?php $this->views(); ?> Views</time></a>
         </div>
       </header>
 

@@ -7,7 +7,7 @@
             <a><img class="collectionHeader-logoImage" src="<?php $this->options->themeUrl('img/category/'); ?><?php echo $this->categories[0]['slug'] . '.jpg'; ?>"></a>
         </div>
         <div class="collectionHeader-nameAndDescription">
-            <h1 class="collectionHeader-name"><?php $this->category(',',false); ?></h1>
+            <h1 class="collectionHeader-name"><?php echo $this->category(',',false); ?></h1>
             <div class="collectionHeader-description"><p><?php echo $this->getDescription(); ?></p>
             </div>        
         </div>
@@ -31,10 +31,10 @@
                         <?php $this->excerpt(80,'...'); ?>
                       </div>
                     <div class="block-postMeta">
-                      <?php $this->views(); ?>次浏览
+                      <?php $this->views(); ?> views
                       <?php $views+=$this->views; ?>
                       <span class="middotDivider"></span>
-                     <a data-no-instant><time class="lately-a" datetime="<?php $this->date('Y-m-d H:i:s'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s');?></time></a>
+                     <a data-no-instant><time class="lately-a" datetime="<?php $this->date('Y-m-d'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d');?></time></a>
                     </div>
               </article>
           <?php endwhile; ?>

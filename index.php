@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @package Bigfa
+ * @package UXPTD-Theme
  * @author tony
  * @version 1.0
  */
@@ -29,7 +29,7 @@ $this->need('header.php');
               <div class="block-postMeta">
                 <a href="<?php $this->permalink() ?>"  rel="category tag"><?php $this->category(','); ?></a>
                 <span class="middotDivider"></span>
-               <a data-no-instant><time class="lately-a" datetime="<?php $this->date('Y-m-d H:i:s'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d H:i:s');?></time></a>
+                <a data-no-instant><time class="lately-a" datetime="<?php $this->date('Y-m-d'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d');?></time></a>
               </div>
             </article>
           <?php endwhile; ?>
