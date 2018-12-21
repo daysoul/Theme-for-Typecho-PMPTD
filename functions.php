@@ -139,7 +139,7 @@ function thumb($cid) {
 		if(!empty($options->thumUrl) && $options->thumUrl)
 			$imgurl = $options->thumUrl;
 		else
-            $imgurl = 'http://47.92.138.2/usr/themes/Theme-for-Typecho-UXPTD/img/default.jpg';
+            $imgurl = 'http://47.92.138.2/usr/themes/Theme-for-Typecho-PMPTD/img/default.jpg';
 	}
 	 $db = Typecho_Db::get();
 	 $rs = $db->fetchRow($db->select('table.contents.text')
