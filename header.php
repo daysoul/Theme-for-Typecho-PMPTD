@@ -45,7 +45,7 @@ if (!empty($this->options->next_cdn) && $this->options->next_cdn){
             <!-- 判断页面输出页面list -->
             <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
             <?php while($pages->next()): ?>
-                <?php if (($pages->slug != 'about') && ($pages->slug != 'log')):?>
+                <?php if ($pages->slug != 'about'):?>
                 <li class="subnav-li">
                   <a href="<?php $pages->permalink(); ?>" class="subnav-item" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                 </li>
