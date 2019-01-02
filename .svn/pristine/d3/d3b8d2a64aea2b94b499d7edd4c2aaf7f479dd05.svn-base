@@ -1,0 +1,40 @@
+.pagelist {
+	position:relative;
+	overflow:hidden;
+	padding:15px 0;
+}
+.pagearchive-year {
+	font-size:42px;
+	padding-bottom:0px;
+	padding-top:40px;
+	color:rgba(0,0,0,.44);
+	font-weight:200;
+	font-weight:bold;
+}
+.pagemonth-title {
+	font-weight:200;
+	font-size:18px;
+	padding-top:40px;
+	padding-bottom:20px;
+	font-weight:bold;
+}
+.pagearchive-list {
+	padding-bottom:30px;
+	border-top:1px solid #eee;
+}
+.pagearchive-item {
+	padding:10px 15px;
+	font-size:18px;
+	border-bottom:1px solid #eee
+}
+.pagearchive-item-title {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	display:block
+}
+.pagearchive-item-meta {
+	color:rgba(0,0,0,.44);
+	font-size:12px;
+	font-weight:200
+}
