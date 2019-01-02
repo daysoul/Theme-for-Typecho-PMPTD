@@ -1,4 +1,3 @@
-# UXPTD-Devlog
 ## v1.1
 
 #### Features
