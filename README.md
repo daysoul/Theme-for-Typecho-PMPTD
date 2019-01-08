@@ -1,11 +1,17 @@
-## v1.1
+## v1.3
 
 #### Features
-- Aliyun ECS申请
-- typecho基础搭建
+- 添加文章归档模板作为home
+- 修改footer
+    - 添加jozhn/Bigfa
+    - 添加devlog页面链接
+
+#### Optimize
+- 优化固定链接
+
 
 #### Fix
-- 主题基础修改	[Bigfa](https://github.com/jozhn/Bigfa)					
+- 添加侧边栏BIO
 
 ## v1.2
 
@@ -25,18 +31,11 @@
     - 基础分类图
     - 网站LOGO设计
 
-
-## v1.3
+## v1.1
 
 #### Features
-- 添加文章归档模板作为home
-- 修改footer
-    - 添加jozhn/Bigfa
-    - 添加devlog页面链接
-
-#### Optimize
-- 优化固定链接
-
+- Aliyun ECS申请
+- typecho基础搭建
 
 #### Fix
-- 添加侧边栏BIO
+- 主题基础修改	[Bigfa](https://github.com/jozhn/Bigfa)					
